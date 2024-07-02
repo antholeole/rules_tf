@@ -1,5 +1,3 @@
-package()
-
 filegroup(
     name = "standard_package",
     srcs = [
