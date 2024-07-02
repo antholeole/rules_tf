@@ -18,8 +18,6 @@ def tf_module(name,
               data = [],
               size="small",
               providers = [],
-              tflint_config = None,
-              tflint_extra_args = [],
               deps = [],
               experiments = [],
               visibility= ["//visibility:public"],
@@ -56,29 +54,6 @@ def tf_module(name,
         tags = tags,
     )
 
-    tf_format_test(
-        name = "format",
-        size = size,
-        module = ":module",
-        tags = tags,
-    )
-
-    tf_lint_test(
-        name = "lint",
-        module = ":module",
-        config = tflint_config,
-        extra_args = tflint_extra_args,
-        size = size,
-        tags = tags,
-    )
-
-    tf_validate_test(
-        name = "validate",
-        module = ":module",
-        size = size,
-        tags = tags,
-    )
-
     pkg_tar(
         name = "tgz",
         srcs = [ ":module", ":deps"],
@@ -96,22 +71,6 @@ def tf_module(name,
         tags = tags,
     )
 
-
-def tf_format(name, modules, **kwargs):
-    _tf_format(
-        name = name,
-        modules = modules,
-        visibility = ["//visibility:public"],
-        **kwargs
-    )
-
-def tf_gen_doc(name, modules, config = None, **kwargs):
-    _tf_gen_doc(
-        name = name,
-        modules = modules,
-        config = config,
-        visibility = ["//visibility:public"],
-        **kwargs
     )
 
 def tf_providers_versions(name, tf_version = "", providers = {}, tags = ["no-sandbox"], **kwargs):

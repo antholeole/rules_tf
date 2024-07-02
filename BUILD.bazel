@@ -37,16 +37,6 @@ filegroup(
 )
 
 toolchain_type(
-   name = "tflint_toolchain_type",
-   visibility = ["//visibility:public"],
-)
-
-toolchain_type(
    name = "tf_toolchain_type",
-   visibility = ["//visibility:public"],
-)
-
-toolchain_type(
-   name = "tfdoc_toolchain_type",
    visibility = ["//visibility:public"],
 )
