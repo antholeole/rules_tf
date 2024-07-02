@@ -1,4 +1,4 @@
-package(default_applicable_licenses = ["//:license"])
+package()
 
 filegroup(
     name = "standard_package",
