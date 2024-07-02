@@ -1,7 +1,7 @@
 module(
-    name = "rules_tf",
+    name = "tf_toolchain",
     version = "0.0.8",
-    repo_name = "rules_tf",
+    repo_name = "tf_toolchain",
     compatibility_level = 1,
 )
 
