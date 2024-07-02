@@ -1,6 +1,6 @@
 {
   "lockFileVersion": 3,
-  "moduleFileHash": "ab9dc1be53eaffb18ec0e2c9494d2b04c824ddf7b4c4adc2c6323297e998de55",
+  "moduleFileHash": "9925b31c7b62d3f52e26472831754c44fe02cafafb3cdd05d0c4b78992a2fbcc",
   "flags": {
     "cmdRegistries": [
       "https://bcr.bazel.build/"
@@ -17,17 +17,17 @@
   },
   "moduleDepGraph": {
     "<root>": {
-      "name": "rules_tf",
+      "name": "tf_toolchain",
       "version": "0.0.8",
       "key": "<root>",
-      "repoName": "rules_tf",
+      "repoName": "tf_toolchain",
       "executionPlatformsToRegister": [],
       "toolchainsToRegister": [
         "@tf_toolchains//:all"
       ],
       "extensionUsages": [
         {
-          "extensionBzlFile": "@rules_tf//tf:extensions.bzl",
+          "extensionBzlFile": "@tf_toolchain//tf:extensions.bzl",
           "extensionName": "tf_repositories",
           "usingModule": "<root>",
           "location": {
